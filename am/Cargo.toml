@@ -1,0 +1,17 @@
+[package]
+name = "am"
+version = "0.2.0"
+edition = "2021"
+
+[dependencies]
+reqwest = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+regex = { workspace = true }
+once_cell = { workspace = true }
+anyhow = { workspace = true }
+rustyline = { workspace = true, optional = true }
+
+[features]
+default = ["repl-history"]
+repl-history = ["rustyline"]
